@@ -1,14 +1,14 @@
-# 🚗 Car Type Classifier — Familiale vs Sportive
+#  Car Type Classifier — Familiale vs Sportive
 
 > Projet réalisé dans le cadre du cours **Large Language Models** — Échéance : 8 juin 2026
 
-## 📌 Problématique
+##  Problématique
 
 Peut-on automatiquement classifier une voiture comme **familiale** ou **sportive** à partir de sa description textuelle (nombre de places, puissance, type de carrosserie, usage) grâce à un LLM pré-entraîné en **zero-shot** ?
 
 ---
 
-## 🗂️ Structure du projet
+##  Structure du projet
 
 ```
 car-llm-classifier/
@@ -26,7 +26,7 @@ car-llm-classifier/
 
 ---
 
-## 📦 Données
+##  Données
 
 Deux datasets Kaggle combinés :
 
@@ -43,11 +43,11 @@ kaggle datasets download -d makslypko/large-cars-dataset -p data/
 cd data && unzip "*.zip"
 ```
 
-> 💡 Vous aurez besoin d'un compte Kaggle et d'un fichier `~/.kaggle/kaggle.json`.
+>  Vous aurez besoin d'un compte Kaggle et d'un fichier `~/.kaggle/kaggle.json`.
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ```bash
 git clone https://github.com/VOTRE_USERNAME/car-llm-classifier.git
@@ -57,7 +57,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Utilisation
+##  Utilisation
 
 ### Option 1 — Script Python autonome
 
@@ -80,7 +80,7 @@ Ouvrir les notebooks dans l'ordre :
 
 ---
 
-## 🔬 Approche technique
+##  Approche technique
 
 - **Modèle** : `facebook/bart-large-mnli` (zero-shot classification, HuggingFace)
 - **Labels** : `["family car", "sport car"]`
@@ -89,7 +89,7 @@ Ouvrir les notebooks dans l'ordre :
 
 ---
 
-## 📊 Résultats attendus
+##  Résultats attendus
 
 | Métrique | Description |
 |---|---|
@@ -99,12 +99,12 @@ Ouvrir les notebooks dans l'ordre :
 
 ---
 
-## 🧠 Modèle utilisé
+##  Modèle utilisé
 
 `facebook/bart-large-mnli` est un modèle de 400M paramètres fine-tuné sur MNLI (Multi-Genre Natural Language Inference). Il permet la classification zero-shot sans aucun entraînement supplémentaire.
 
 ---
 
-## 👤 Auteur
+##  Auteur
 
 Projet réalisé dans le cadre du Master IA — Cours Large Language Models 2025/2026.
