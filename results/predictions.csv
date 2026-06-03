@@ -1,0 +1,41 @@
+car_name,seats,hp,speed_kmh,fuel,true_label,text_description,predicted_label,score_family,score_sport,predicted_class
+Renault Espace,7,140,200,Diesel,family,"Renault Espace, 7 seats, 140 HP, top speed 200 km/h, Diesel",family car,0.5536420941352844,0.4463578760623932,family
+Volkswagen Touran,7,150,195,Diesel,family,"Volkswagen Touran, 7 seats, 150 HP, top speed 195 km/h, Diesel",sport car,0.43862059712409973,0.5613794326782227,sport
+Ford S-Max,7,160,205,Petrol,family,"Ford S-Max, 7 seats, 160 HP, top speed 205 km/h, Petrol",sport car,0.32992616295814514,0.6700738668441772,sport
+Toyota Verso,7,130,185,Hybrid,family,"Toyota Verso, 7 seats, 130 HP, top speed 185 km/h, Hybrid",family car,0.5424917340278625,0.45750823616981506,family
+Citroën C4 Picasso,7,120,190,Diesel,family,"Citroën C4 Picasso, 7 seats, 120 HP, top speed 190 km/h, Diesel",sport car,0.2969875633716583,0.7030124664306641,sport
+Peugeot 5008,7,130,198,Diesel,family,"Peugeot 5008, 7 seats, 130 HP, top speed 198 km/h, Diesel",family car,0.6262596249580383,0.3737403452396393,family
+Seat Alhambra,7,150,200,Diesel,family,"Seat Alhambra, 7 seats, 150 HP, top speed 200 km/h, Diesel",family car,0.6279870867729187,0.3720128834247589,family
+Skoda Octavia Combi,5,150,210,Petrol,family,"Skoda Octavia Combi, 5 seats, 150 HP, top speed 210 km/h, Petrol",family car,0.742339551448822,0.2576604187488556,family
+Dacia Lodgy,7,115,175,LPG,family,"Dacia Lodgy, 7 seats, 115 HP, top speed 175 km/h, LPG",family car,0.506094217300415,0.49390581250190735,family
+Opel Zafira,7,140,195,Petrol,family,"Opel Zafira, 7 seats, 140 HP, top speed 195 km/h, Petrol",family car,0.5280895829200745,0.47191041707992554,family
+BMW X5,5,265,240,Diesel,family,"BMW X5, 5 seats, 265 HP, top speed 240 km/h, Diesel",sport car,0.23091073334217072,0.7690892815589905,sport
+Volvo XC90,7,235,210,Hybrid,family,"Volvo XC90, 7 seats, 235 HP, top speed 210 km/h, Hybrid",sport car,0.33689698576927185,0.6631029844284058,sport
+Honda CR-V,5,193,192,Hybrid,family,"Honda CR-V, 5 seats, 193 HP, top speed 192 km/h, Hybrid",family car,0.638643205165863,0.3613567650318146,family
+Kia Sorento,7,200,200,Diesel,family,"Kia Sorento, 7 seats, 200 HP, top speed 200 km/h, Diesel",sport car,0.4428885281085968,0.5571115016937256,sport
+Hyundai Santa Fe,7,200,200,Diesel,family,"Hyundai Santa Fe, 7 seats, 200 HP, top speed 200 km/h, Diesel",sport car,0.3916732966899872,0.6083266735076904,sport
+Toyota Land Cruiser,7,204,210,Diesel,family,"Toyota Land Cruiser, 7 seats, 204 HP, top speed 210 km/h, Diesel",family car,0.82053542137146,0.17946460843086243,family
+Nissan Qashqai,5,140,186,Petrol,family,"Nissan Qashqai, 5 seats, 140 HP, top speed 186 km/h, Petrol",sport car,0.3586800694465637,0.6413199305534363,sport
+Renault Scenic,5,130,195,Diesel,family,"Renault Scenic, 5 seats, 130 HP, top speed 195 km/h, Diesel",sport car,0.4613073766231537,0.5386927127838135,sport
+Ford Galaxy,7,150,205,Diesel,family,"Ford Galaxy, 7 seats, 150 HP, top speed 205 km/h, Diesel",family car,0.8070387244224548,0.19296129047870636,family
+Volkswagen Sharan,7,150,200,Diesel,family,"Volkswagen Sharan, 7 seats, 150 HP, top speed 200 km/h, Diesel",family car,0.6339287161827087,0.36607125401496887,family
+Ferrari 488 GTB,2,670,330,Petrol,sport,"Ferrari 488 GTB, 2 seats, 670 HP, top speed 330 km/h, Petrol",sport car,0.013020559214055538,0.9869794845581055,sport
+Porsche 911 Carrera,2,450,293,Petrol,sport,"Porsche 911 Carrera, 2 seats, 450 HP, top speed 293 km/h, Petrol",sport car,0.027879813686013222,0.9721201658248901,sport
+Lamborghini Huracán,2,610,325,Petrol,sport,"Lamborghini Huracán, 2 seats, 610 HP, top speed 325 km/h, Petrol",sport car,0.013491977006196976,0.9865080118179321,sport
+BMW M3,4,510,290,Petrol,sport,"BMW M3, 4 seats, 510 HP, top speed 290 km/h, Petrol",sport car,0.0855647474527359,0.9144352674484253,sport
+Mercedes-AMG GT,2,476,310,Petrol,sport,"Mercedes-AMG GT, 2 seats, 476 HP, top speed 310 km/h, Petrol",sport car,0.03578970953822136,0.9642102718353271,sport
+Audi R8,2,570,320,Petrol,sport,"Audi R8, 2 seats, 570 HP, top speed 320 km/h, Petrol",sport car,0.025599714368581772,0.9744003415107727,sport
+Chevrolet Corvette C8,2,495,312,Petrol,sport,"Chevrolet Corvette C8, 2 seats, 495 HP, top speed 312 km/h, Petrol",sport car,0.0497836135327816,0.9502164125442505,sport
+Dodge Challenger SRT,4,707,317,Petrol,sport,"Dodge Challenger SRT, 4 seats, 707 HP, top speed 317 km/h, Petrol",sport car,0.0074138701893389225,0.9925861358642578,sport
+Ford Mustang GT500,4,760,290,Petrol,sport,"Ford Mustang GT500, 4 seats, 760 HP, top speed 290 km/h, Petrol",sport car,0.02325521595776081,0.9767447710037231,sport
+McLaren 720S,2,720,341,Petrol,sport,"McLaren 720S, 2 seats, 720 HP, top speed 341 km/h, Petrol",sport car,0.027255531400442123,0.9727444052696228,sport
+Jaguar F-Type R,2,575,300,Petrol,sport,"Jaguar F-Type R, 2 seats, 575 HP, top speed 300 km/h, Petrol",sport car,0.04181143268942833,0.9581885933876038,sport
+Alfa Romeo Giulia QV,4,510,307,Petrol,sport,"Alfa Romeo Giulia QV, 4 seats, 510 HP, top speed 307 km/h, Petrol",sport car,0.18097953498363495,0.8190204501152039,sport
+Renault Mégane RS,4,300,260,Petrol,sport,"Renault Mégane RS, 4 seats, 300 HP, top speed 260 km/h, Petrol",sport car,0.0793817788362503,0.9206182360649109,sport
+Honda Civic Type R,4,320,272,Petrol,sport,"Honda Civic Type R, 4 seats, 320 HP, top speed 272 km/h, Petrol",sport car,0.1010073572397232,0.8989925980567932,sport
+Toyota GR Yaris,4,261,230,Petrol,sport,"Toyota GR Yaris, 4 seats, 261 HP, top speed 230 km/h, Petrol",family car,0.6133818626403809,0.38661807775497437,family
+Volkswagen Golf R,4,320,270,Petrol,sport,"Volkswagen Golf R, 4 seats, 320 HP, top speed 270 km/h, Petrol",sport car,0.0846225842833519,0.9153773784637451,sport
+Subaru BRZ,4,234,226,Petrol,sport,"Subaru BRZ, 4 seats, 234 HP, top speed 226 km/h, Petrol",sport car,0.3077901601791382,0.6922098398208618,sport
+Mazda MX-5,2,184,219,Petrol,sport,"Mazda MX-5, 2 seats, 184 HP, top speed 219 km/h, Petrol",sport car,0.22212980687618256,0.777870237827301,sport
+BMW Z4 M40i,2,340,250,Petrol,sport,"BMW Z4 M40i, 2 seats, 340 HP, top speed 250 km/h, Petrol",sport car,0.13170738518238068,0.8682926297187805,sport
+Aston Martin Vantage,2,510,314,Petrol,sport,"Aston Martin Vantage, 2 seats, 510 HP, top speed 314 km/h, Petrol",sport car,0.041592177003622055,0.9584078192710876,sport

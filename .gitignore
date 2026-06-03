@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.env
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Données (trop lourdes pour Git)
+data/*.csv
+data/*.zip
+data/*.json
+
+# Résultats (optionnel : commenter pour les inclure)
+# results/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Kaggle credentials
+kaggle.json
