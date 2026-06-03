@@ -26,7 +26,7 @@ def load_and_clean_data(data_dir: str = "data/") -> pd.DataFrame:
     """Charge et nettoie les datasets CSV depuis le dossier data/."""
     csv_files = [f for f in os.listdir(data_dir) if f.endswith(".csv")]
     if not csv_files:
-        print("⚠️  Aucun CSV trouvé dans data/. Génération d'un dataset de démonstration...")
+        print("  Aucun CSV trouvé dans data/. Génération d'un dataset de démonstration...")
         return generate_demo_dataset()
 
     dfs = []
@@ -34,15 +34,15 @@ def load_and_clean_data(data_dir: str = "data/") -> pd.DataFrame:
         try:
             df = pd.read_csv(os.path.join(data_dir, f), encoding="utf-8", on_bad_lines="skip")
             dfs.append(df)
-            print(f"✅ Chargé : {f} ({len(df)} lignes, {df.shape[1]} colonnes)")
+            print(f" Chargé : {f} ({len(df)} lignes, {df.shape[1]} colonnes)")
         except Exception as e:
-            print(f"❌ Erreur lecture {f} : {e}")
+            print(f" Erreur lecture {f} : {e}")
 
     df = pd.concat(dfs, ignore_index=True)
     df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
     df = df.drop_duplicates()
     df = df.dropna(subset=[c for c in df.columns if "name" in c or "car" in c], how="all")
-    print(f"\n📊 Dataset final : {len(df)} lignes, {df.shape[1]} colonnes")
+    print(f"\n Dataset final : {len(df)} lignes, {df.shape[1]} colonnes")
     return df
 
 
@@ -96,7 +96,7 @@ def generate_demo_dataset() -> pd.DataFrame:
         ("Aston Martin Vantage", 2, 510, 314, "Petrol", "sport"),
     ]
     df = pd.DataFrame(data, columns=["car_name", "seats", "hp", "speed_kmh", "fuel", "true_label"])
-    print(f"✅ Dataset de démonstration généré : {len(df)} voitures")
+    print(f" Dataset de démonstration généré : {len(df)} voitures")
     return df
 
 
@@ -162,7 +162,7 @@ def build_text_description(row: pd.Series) -> str:
 
 def classify_cars(df: pd.DataFrame, text_col: str = "text_description") -> pd.DataFrame:
     """Applique la classification zero-shot sur la colonne texte."""
-    print("\n🤖 Chargement du modèle facebook/bart-large-mnli...")
+    print("\n Chargement du modèle facebook/bart-large-mnli...")
     classifier = pipeline(
         "zero-shot-classification",
         model="facebook/bart-large-mnli",
@@ -174,7 +174,7 @@ def classify_cars(df: pd.DataFrame, text_col: str = "text_description") -> pd.Da
     scores_family = []
     scores_sport = []
 
-    print(f"🔍 Classification de {len(df)} voitures...")
+    print(f" Classification de {len(df)} voitures...")
     for text in tqdm(df[text_col], desc="Classifying"):
         result = classifier(text, candidate_labels=labels)
         pred = result["labels"][0]  # Label avec le score le plus élevé
@@ -201,7 +201,7 @@ def evaluate(df: pd.DataFrame, true_col: str = "true_label", pred_col: str = "pr
     y_pred = df[pred_col]
 
     print("\n" + "="*50)
-    print("📊 RÉSULTATS D'ÉVALUATION")
+    print(" RÉSULTATS D'ÉVALUATION")
     print("="*50)
     acc = accuracy_score(y_true, y_pred)
     prec = precision_score(y_true, y_pred, pos_label="sport", zero_division=0)
@@ -252,7 +252,7 @@ def plot_results(df: pd.DataFrame, metrics: dict, output_dir: str = "results/"):
                          f"{val:.2%}", ha="center", fontsize=11, fontweight="bold")
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, "evaluation_metrics.png"), dpi=150)
-        print(f"\n✅ Graphique sauvegardé : {output_dir}evaluation_metrics.png")
+        print(f"\n Graphique sauvegardé : {output_dir}evaluation_metrics.png")
         plt.show()
 
     # --- Distribution des scores de confiance ---
@@ -266,7 +266,7 @@ def plot_results(df: pd.DataFrame, metrics: dict, output_dir: str = "results/"):
     ax.legend()
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, "confidence_scores.png"), dpi=150)
-    print(f"✅ Graphique sauvegardé : {output_dir}confidence_scores.png")
+    print(f" Graphique sauvegardé : {output_dir}confidence_scores.png")
     plt.show()
 
 
@@ -275,13 +275,13 @@ def plot_results(df: pd.DataFrame, metrics: dict, output_dir: str = "results/"):
 # ─────────────────────────────────────────
 
 def main():
-    print("🚗 === Car Type Classifier — LLM Zero-Shot ===\n")
+    print(" === Car Type Classifier — LLM Zero-Shot ===\n")
 
     # Chargement
     df = load_and_clean_data("data/")
 
     # Construction des descriptions textuelles
-    print("\n📝 Construction des descriptions textuelles...")
+    print("\n Construction des descriptions textuelles...")
     df["text_description"] = df.apply(build_text_description, axis=1)
     print("Exemples de descriptions :")
     for txt in df["text_description"].head(3):
@@ -291,7 +291,7 @@ def main():
     df = classify_cars(df)
 
     # Affichage d'un échantillon
-    print("\n🔎 Exemples de prédictions :")
+    print("\n Exemples de prédictions :")
     cols_to_show = ["text_description", "predicted_label", "score_family", "score_sport"]
     if "true_label" in df.columns:
         cols_to_show.insert(1, "true_label")
@@ -302,18 +302,18 @@ def main():
     if "true_label" in df.columns:
         metrics = evaluate(df)
     else:
-        print("\n⚠️  Pas de colonne 'true_label' trouvée : évaluation ignorée.")
+        print("\n  Pas de colonne 'true_label' trouvée : évaluation ignorée.")
         print("   Pour évaluer, ajoutez une colonne 'true_label' avec les valeurs 'family' ou 'sport'.")
 
     # Sauvegarde des résultats
     os.makedirs("results", exist_ok=True)
     df.to_csv("results/predictions.csv", index=False)
-    print("\n✅ Prédictions sauvegardées : results/predictions.csv")
+    print("\n Prédictions sauvegardées : results/predictions.csv")
 
     # Visualisations
     plot_results(df, metrics)
 
-    print("\n🎉 Pipeline terminé avec succès !")
+    print("\n Pipeline terminé avec succès !")
 
 
 if __name__ == "__main__":
